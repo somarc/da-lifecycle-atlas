@@ -20,7 +20,7 @@ Canonical CLI: `/Users/mhess/aem/aem-code/da/da-cli/bin/da.js` (`0.5.1`, source 
    - `02-construct-plan.json`
    - `03-construct-run.json`
    - `03-construct-run.stderr.txt`
-   - 17/17 steps completed: seven content writes/previews plus contracts, freshness, and code proof.
+   - Initial construct: 17/17 steps completed. After the approved media input joined the canonical pipeline, the final current construct completed 18/18, including binary upload, seven content writes/previews, contracts, freshness, and code proof (`27`–`30` evidence files).
 
 4. **Content and block contracts proved**
    - `04-content-tree.json` — seven canonical DA documents.

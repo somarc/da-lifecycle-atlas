@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/index.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/",
+    "status": "ok"
+  },
+  {
+    "path": "/nav.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/nav",
+    "status": "ok"
+  },
+  {
+    "path": "/footer.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/footer",
+    "status": "ok"
+  },
+  {
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/explainers/helix-5-to-helix-6",
+    "status": "ok"
+  },
+  {
+    "path": "/plans.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/plans",
+    "status": "ok"
+  },
+  {
+    "path": "/learnings.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/learnings",
+    "status": "ok"
+  },
+  {
+    "path": "/provenance.html",
+    "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/provenance",
+    "status": "ok"
+  }
+]
