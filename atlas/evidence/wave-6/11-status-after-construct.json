@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "operation": "status",
+  "data": {
+    "cwd": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+    "cli": {
+      "version": "0.5.1",
+      "packageRoot": "/Users/mhess/aem/aem-code/da/da-cli",
+      "installKind": "source-tree",
+      "git": {
+        "sha": "cae3e54",
+        "dirty": false
+      }
+    },
+    "config": {
+      "org": "somarc",
+      "repo": "da-lifecycle-atlas",
+      "env": "prod",
+      "branch": "feature-wave-6-full-da-site",
+      "sources": {
+        "org": "flag",
+        "repo": "flag",
+        "env": "project",
+        "branch": "flag"
+      },
+      "projectConfigPath": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da.json",
+      "globalConfigPath": "/Users/mhess/.da/config.json"
+    },
+    "auth": {
+      "valid": true,
+      "reason": null,
+      "expiresAt": 1784262041388,
+      "remainingMs": 3067749
+    },
+    "git": {
+      "available": true,
+      "root": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+      "branch": "feature-wave-6-full-da-site",
+      "upstream": "origin/feature-wave-6-full-da-site",
+      "dirty": true
+    }
+  },
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --format json content list /"
+  ]
+}

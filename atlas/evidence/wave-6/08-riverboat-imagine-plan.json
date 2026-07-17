@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "operation": "pipeline.plan",
+  "target": ".grok-proof/riverboat-imagine.yaml",
+  "data": {
+    "name": "atlas-grok-imagine-proof",
+    "context": {},
+    "steps": [
+      {
+        "id": "generate-atlas-transition",
+        "command": "./.grok-proof/bin/capture-imagine.sh",
+        "if": null,
+        "retry": null,
+        "depends_on": [],
+        "requires_approval": true,
+        "timeout": "10m",
+        "continue_on_error": false,
+        "reconcile": null,
+        "executionMode": "shell-executable"
+      }
+    ],
+    "batches": [
+      [
+        "generate-atlas-transition"
+      ]
+    ],
+    "riverboat": {
+      "unsafeExecution": true,
+      "shellSteps": [
+        "generate-atlas-transition"
+      ],
+      "shellStepsWithoutApproval": []
+    }
+  },
+  "warnings": [
+    "Riverboat Gambler enables arbitrary local shell execution, bypasses normal pipeline command/environment/target validation, and is not gated by root --commit. Run only trusted YAML in a trusted repository."
+  ],
+  "next": [
+    "da --riverboat-gambler --format json pipeline run .grok-proof/riverboat-imagine.yaml"
+  ]
+}

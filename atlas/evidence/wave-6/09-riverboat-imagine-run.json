@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "operation": "pipeline.run",
+  "target": ".grok-proof/riverboat-imagine.yaml",
+  "data": {
+    "runId": "a025c6c9",
+    "name": "atlas-grok-imagine-proof",
+    "status": "completed",
+    "startedAt": "2026-07-17T03:28:16.214Z",
+    "completedAt": "2026-07-17T03:28:31.585Z",
+    "riverboat": {
+      "unsafeExecution": true
+    },
+    "steps": {
+      "generate-atlas-transition": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T03:28:31.585Z"
+      }
+    }
+  },
+  "warnings": [
+    "Riverboat Gambler enables arbitrary local shell execution, bypasses normal pipeline command/environment/target validation, and is not gated by root --commit. Run only trusted YAML in a trusted repository."
+  ],
+  "next": [
+    "da --format json pipeline status a025c6c9"
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da/runs/a025c6c9/result.json"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+Pipeline run a025c6c9 started: atlas-grok-imagine-proof
+State: /Users/mhess/.da/pipeline-runs/a025c6c9.json
+Result: /Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da/runs/a025c6c9/result.json
+[riverboat-gambler] Riverboat Gambler enables arbitrary local shell execution, bypasses normal pipeline command/environment/target validation, and is not gated by root --commit. Run only trusted YAML in a trusted repository.
+-> generate-atlas-transition: ./.grok-proof/bin/capture-imagine.sh
+[riverboat-gambler] UNSAFE pipeline execution enabled
+[riverboat-gambler] step=generate-atlas-transition mode=shell-executable
+[riverboat-gambler] cwd=/Users/mhess/aem/aem-code/da/da-lifecycle-atlas
+[riverboat-gambler] command=./.grok-proof/bin/capture-imagine.sh
+
+Evidence captured: .grok-proof/evidence/019f6e1e-2a05-7201-b63b-2da6d115d22b

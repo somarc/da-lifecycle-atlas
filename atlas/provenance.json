@@ -30,9 +30,14 @@
   },
   "outsideTools": {
     "grokImagine": {
-      "status": "planned-proof-not-yet-executed",
+      "status": "human-approved-promoted-input",
       "trustBoundary": "Riverboat Gambler reviewed local YAML",
-      "reconstruction": "frozen reviewed asset is consumed by constrained construct; generation is not deterministic reconstruction"
+      "reconstruction": "frozen reviewed asset is consumed by constrained construct; generation is not deterministic reconstruction",
+      "prompt": ".grok-proof/prompts/helix-transition.txt",
+      "riverboatPlan": "atlas/evidence/wave-6/08-riverboat-imagine-plan.json",
+      "riverboatResult": "atlas/evidence/wave-6/09-riverboat-imagine-run.json",
+      "evidenceBundle": ".grok-proof/evidence/019f6e1e-2a05-7201-b63b-2da6d115d22b",
+      "promotedPath": "media/atlas/helix-transition.jpg"
     }
   }
 }

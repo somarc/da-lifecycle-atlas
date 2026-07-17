@@ -6,8 +6,12 @@ name: da-lifecycle-atlas-wave-6-construct
 # Run:
 #   da --org somarc --repo da-lifecycle-atlas --branch feature-wave-6-full-da-site --commit pipeline run atlas/construct.yaml --format json
 steps:
+  - id: put-helix-transition-media
+    command: content put /media/atlas/helix-transition.jpg media/atlas/helix-transition.jpg --format json
+
   - id: put-index
     command: content put /index.html atlas/fixtures/index.html --format json
+    depends_on: [put-helix-transition-media]
   - id: preview-index
     command: preview page /index --format json
     depends_on: [put-index]
