@@ -1,0 +1,53 @@
+.atlas-compare .atlas-compare-row {
+  display: grid;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.atlas-compare .atlas-compare-panel {
+  position: relative;
+  border: 1px solid var(--atlas-line);
+  padding: 26px;
+  background: var(--atlas-surface);
+  box-shadow: var(--atlas-shadow);
+}
+
+.atlas-compare .atlas-compare-panel::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: var(--atlas-rust);
+  content: '';
+}
+
+.atlas-compare .atlas-compare-new::before {
+  background: var(--atlas-teal);
+}
+
+.atlas-compare h3 {
+  margin-top: 0;
+  font-size: var(--heading-font-size-l);
+}
+
+.atlas-compare code {
+  overflow-wrap: anywhere;
+}
+
+.atlas-compare .atlas-compare-arrow {
+  display: grid;
+  min-height: 48px;
+  place-items: center;
+  color: var(--atlas-gold);
+  font-size: 40px;
+  transform: rotate(90deg);
+}
+
+@media (width >= 900px) {
+  .atlas-compare .atlas-compare-row {
+    grid-template-columns: 1fr 64px 1fr;
+  }
+
+  .atlas-compare .atlas-compare-arrow {
+    transform: none;
+  }
+}

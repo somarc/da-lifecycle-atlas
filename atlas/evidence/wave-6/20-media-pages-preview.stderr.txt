@@ -1,0 +1,11 @@
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview pages / /explainers/helix-5-to-helix-6
+  Source: / /explainers/helix-5-to-helix-6
+  Paths: 2
+    /index.html
+    /explainers/helix-5-to-helix-6.html
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Previewing 2 page(s) with concurrency 5…

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/learnings",
+  "data": {
+    "mode": "committed",
+    "path": "/learnings",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/learnings"
+  },
+  "changes": [
+    "/learnings"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /learnings"
+  ]
+}

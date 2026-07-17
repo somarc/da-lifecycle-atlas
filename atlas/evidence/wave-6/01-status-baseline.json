@@ -1,0 +1,50 @@
+{
+  "ok": false,
+  "operation": "status",
+  "data": {
+    "cwd": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+    "cli": {
+      "version": "0.5.1",
+      "packageRoot": "/Users/mhess/aem/aem-code/da/da-cli",
+      "installKind": "source-tree",
+      "git": {
+        "sha": "cae3e54",
+        "dirty": false
+      }
+    },
+    "config": {
+      "org": "somarc",
+      "repo": "da-lifecycle-atlas",
+      "env": "prod",
+      "branch": "feature-wave-6-full-da-site",
+      "sources": {
+        "org": "flag",
+        "repo": "flag",
+        "env": "default",
+        "branch": "flag"
+      },
+      "projectConfigPath": null,
+      "globalConfigPath": "/Users/mhess/.da/config.json"
+    },
+    "auth": {
+      "valid": false,
+      "reason": "expired",
+      "expiresAt": 1784255726291,
+      "remainingMs": null
+    },
+    "git": {
+      "available": true,
+      "root": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+      "branch": "feature-wave-6-full-da-site",
+      "upstream": null,
+      "dirty": true
+    }
+  },
+  "warnings": [
+    "DA auth is not valid: expired."
+  ],
+  "next": [
+    "da auth login",
+    "da --org somarc --repo da-lifecycle-atlas --format json content list /"
+  ]
+}

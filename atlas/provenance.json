@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1",
+  "site": {
+    "org": "somarc",
+    "repo": "da-lifecycle-atlas",
+    "purpose": "da-cli 0.6.0 Wave 6 second-site-from-scratch proof"
+  },
+  "construction": {
+    "pipeline": "atlas/construct.yaml",
+    "canonicalCli": "/Users/mhess/aem/aem-code/da/da-cli/bin/da.js",
+    "stopsAt": "preview",
+    "publishRequiresSeparateHumanPromotion": true
+  },
+  "routes": [
+    "/index.html",
+    "/nav.html",
+    "/footer.html",
+    "/explainers/helix-5-to-helix-6.html",
+    "/plans.html",
+    "/learnings.html",
+    "/provenance.html"
+  ],
+  "agentEngagement": {
+    "framing": "melting pot",
+    "note": "The project has evolved through human-directed work across models, tools, and applications. This record does not invent retrospective model ownership."
+  },
+  "observedBaseline": {
+    "authEvidence": "atlas/evidence/wave-6/00-auth-expired.json",
+    "statusEvidence": "atlas/evidence/wave-6/01-status-baseline.json"
+  },
+  "outsideTools": {
+    "grokImagine": {
+      "status": "human-approved-promoted-input",
+      "trustBoundary": "Riverboat Gambler reviewed local YAML",
+      "reconstruction": "frozen reviewed asset is consumed by constrained construct; generation is not deterministic reconstruction",
+      "prompt": ".grok-proof/prompts/helix-transition.txt",
+      "riverboatPlan": "atlas/evidence/wave-6/08-riverboat-imagine-plan.json",
+      "riverboatResult": "atlas/evidence/wave-6/09-riverboat-imagine-run.json",
+      "evidenceBundle": ".grok-proof/evidence/019f6e1e-2a05-7201-b63b-2da6d115d22b",
+      "promotedPath": "media/atlas/helix-transition.jpg"
+    }
+  }
+}

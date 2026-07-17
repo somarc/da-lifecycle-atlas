@@ -1,0 +1,855 @@
+Pipeline run f9e6b981 started: da-lifecycle-atlas-wave-6-construct
+State: /Users/mhess/.da/pipeline-runs/f9e6b981.json
+Result: /Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da/runs/f9e6b981/result.json
+-> put-index: content put /index.html atlas/fixtures/index.html --format json
+Diff for /index.html:
+-       <picture><img
++       <div class="atlas-hero">
+-           src="https://main--mysite--aemtutorial.aem.page/media_198e23b1db7523411c3dac33c9d58363ef0805cbf.jpg?width=2000&format=jpg&optimize=medium"
++         <div>
+-           title="Decorative double Helix" loading="lazy"></picture>
++           <div>
+-       <h1>Congrats, you are ready to go! </h1>
++             <p>DA CLI · LIFECYCLE · FIELD NOTES</p>
+-       <p>Your forked repo is set up as an AEM Project and you are ready to start developing.<br></p>
++             <h1>DA Lifecycle Atlas</h1>
+-       <p>See the full tutorial here:<br><a href="https://bit.ly/3aImqUL">https://www.aem.live/tutorial</a></p>
++             <p>Visual field guides for the control plane behind agent-operated Edge Delivery sites—what changes, what breaks, and how we prove the recovery.</p>
+-       <p><br><br></p>
++             <p><a href="/explainers/helix-5-to-helix-6">Start with Helix 5 → Helix 6</a></p>
+-       <h2>This is another headline here for more content</h2>
++           </div>
+-       <p><br></p>
++         </div>
+-       <div class="columns">
++       </div>
+-         <div>
++     </div>
+-           <div>
++     <div>
+-             <p><br></p>
++       <h2>Maps for the parts you cannot see.</h2>
+-             <p>Columns block</p>
++       <p>The webpage is only the visible end. The Atlas explains source, code, preview, publish, jobs, configuration, and the safety contracts that connect them.</p>
+-             <p><br></p>
++       <div class="atlas-grid three-up">
+-             <ul>
++         <div><div><p>Explainer 01</p><h3><a href="/explainers/helix-5-to-helix-6">Helix 5 → Helix 6</a></h3><p>Two control desks become one API campus—and clients need a translator.</p></div></div>
+-               <li>One</li>
++         <div><div><p>Lifecycle plans</p><h3><a href="/plans">What da-cli builds next</a></h3><p>Forward-compatibility plans stated as observable contracts rather than wish lists.</p></div></div>
+-               <li>Two</li>
++         <div><div><p>Field record</p><h3><a href="/learnings">What the build teaches us</a></h3><p>Friction found by constructing this second site from scratch with da-cli.</p></div></div>
+-               <li>Three</li>
++       </div>
+-             </ul>
++     </div>
+-             <p><br></p>
++     <div>
+-             <p><a href="https://main--aem-boilerplate--adobe.hlx.live/">Live</a></p>
++       <h2>This site is part of the test.</h2>
+-           </div>
++       <p>The first da-cli certification site proves depth against one mature target. This second site proves first contact: a clean boilerplate, a new DA content source, new block contracts, media, navigation, construction, preview, publish, and recovery.</p>
+-           <div>
++       <div class="atlas-compare">
+-             <picture><img
++         <div><div><p>Assertion</p><h3>“The CLI can build a site.”</h3><p>A claim without evidence.</p></div><div><p>Proof</p><h3>Source → preview → live</h3><p>Stored commands, public checks, fresh-session recovery, and a constrained reconstruction pipeline.</p></div></div>
+-                 src="https://main--mysite--aemtutorial.aem.page/media_17e9dd0aae03d62b8ebe2159b154d6824ef55732d.png?width=750&format=png&optimize=medium"
++       </div>
+-                 title="green double Helix" loading="lazy"></picture>
++     </div>
+-           </div>
++     <div>
+-         </div>
++       <h2>A melting pot of agent engagement.</h2>
+-         <div>
++       <p>da-cli has evolved through human-directed work across models, tools, and applications. The Atlas does not invent a forensic authorship ledger. It shows the collaborative process when useful and keeps the operational proof focused on what can actually be observed.</p>
+-           <div>
++       <p><a href="/provenance">How this Atlas treats provenance</a></p>
+-             <h2>
++     </div>
+-               <picture><img
++     <div><div class="metadata"><div><div>Title</div><div>DA Lifecycle Atlas</div></div><div><div>Description</div><div>Visual field guides and lifecycle plans for da-cli and agent-operated Edge Delivery sites.</div></div><div><div>kind</div><div>home</div></div></div></div>
+-                   src="https://main--mysite--aemtutorial.aem.page/media_1729f1ee89b0906b7c66c98c778581dae957f641c.png?width=750&format=png&optimize=medium"
++   </main>
+-                   title="Yellow Double Helix" loading="lazy"></picture>
++   <footer></footer>
+-             </h2>
++ </body>
+-           </div>
++ 
+-           <div>
+-             <p><br><br><br></p>
+-             <p>Or you can just view the preview</p>
+-             <p><br><br></p>
+-             <p><a href="https://main--aem-boilerplate--adobe.hlx.page/"><em>Preview</em></a></p>
+-           </div>
+-         </div>
+-       </div>
+-       <p><br><br></p>
+-     </div>
+-     <div>
+-       <p><br></p>
+-       <h2>Boilerplate Highlights?</h2>
+-       <p><br></p>
+-       <p>Find some of our favorite staff picks below:</p>
+-       <p><br><br><br></p>
+-       <div class="cards">
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_10d2145a1bd4a2c1808b6a3aa5f4d678f4fd77c62.jpg?width=750&format=jpg&optimize=medium"
+-                 title="A fast-moving Tunnel " loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Unmatched speed</strong></p>
+-             <p>AEM is the fastest way to publish, create, and serve websites</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_1fa6f697de17429a7e9d0a36e5cf954884071248f.jpg?width=750&format=jpg&optimize=medium"
+-                 title="An iceberg" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Content at scale</strong></p>
+-             <p>AEM allows you to publish more content in shorter time with smaller teams</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_1efac94231677ba3de8ad093c207eef1d3c430c0d.jpg?width=750&format=jpg&optimize=medium"
+-                 title="Doors with light in the dark" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Uncertainty eliminated</strong></p>
+-             <p>Preview content at 100% fidelity, get predictable content velocity, and shorten project durations</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_14693ba3c19e0f6b7ff583d60f3b8385d0e2a0182.jpg?width=750&format=jpg&optimize=medium"
+-                 title="A group of people around a Table" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Widen the talent pool</strong></p>
+-             <p>Authors on AEM use Microsoft Word, Excel or Google Docs and need no training</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_182a53ba04f2bd7151a3b5c632a45f31ceab073eb.jpg?width=750&format=jpg&optimize=medium"
+-                 title="HTML code in a code editor" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>The low-code way to developer productivity</strong></p>
+-             <p>Say goodbye to complex APIs spanning multiple languages. Anyone with a little bit of HTML, CSS, and JS
+-               can build a site on AEM.</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_1a28494cd8f002e18c2aa02997fe23850e157dba0.jpg?width=750&format=jpg&optimize=medium"
+-                 title="A rocket and a headless suit" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Headless is here</strong></p>
+-             <p>Go directly from Microsoft Excel or Google Sheets to the web in mere seconds. Sanitize and collect form
+-               data at extreme scale with AEM Forms.</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <picture><img
+-                 src="https://main--mysite--aemtutorial.aem.page/media_119f4735f434eb745cdd5a0d56f002bfddfb6ff3c.jpg?width=750&format=jpg&optimize=medium"
+-                 title="A dial with a hand on it" loading="lazy"></picture>
+-           </div>
+-           <div>
+-             <p><strong>Peak performance</strong></p>
+-             <p>Use AEM's serverless architecture to meet any traffic need. Use AEM's PageSpeed Insights Github action to
+-               evaluate every Pull-Request for Lighthouse Score.</p>
+-           </div>
+-         </div>
+-       </div>
+-       <p><br><br><br></p>
+-       <div class="section-metadata">
+-         <div>
+-           <div>
+-             <p>Style</p>
+-           </div>
+-           <div>
+-             <p>highlight</p>
+-           </div>
+-         </div>
+-       </div>
+-       <p><br></p>
+-     </div>
+-     <div>
+-       <p><br></p>
+-       <div class="metadata">
+-         <div>
+-           <div>
+-             <p>Title</p>
+-           </div>
+-           <div>
+-             <p>Home | AEM Boilerplate</p>
+-           </div>
+-         </div>
+-         <div>
+-           <div>
+-             <p>Description</p>
+-           </div>
+... diff truncated: 10 more changed line(s) omitted ...
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /index.html
+  Source: atlas/fixtures/index.html
+  Paths: 1
+    /index.html
+  Note: Render preflight: 5 section(s), 4 block(s).
+Uploaded /index.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/index.html",
+  "data": {
+    "mode": "committed",
+    "path": "/index.html",
+    "source": "atlas/fixtures/index.html"
+  },
+  "changes": [
+    "/index.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /index.html"
+  ]
+}
+-> preview-index: preview page /index --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /index
+  Paths: 1
+    /index
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /index
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/index",
+  "data": {
+    "mode": "committed",
+    "path": "/index",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/"
+  },
+  "changes": [
+    "/index"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /index"
+  ]
+}
+-> put-nav: content put /nav.html atlas/fixtures/nav.html --format json
+Diff for /nav.html:
+- 
++ <body><header></header><main>
+- <body>
++ <div><p><a href="/"><span>DA Lifecycle Atlas</span></a></p></div>
+-   <header></header>
++ <div><ul><li><a href="/">Home</a></li><li>Explain<ul><li><a href="/explainers/helix-5-to-helix-6">Helix 5 → Helix 6</a></li></ul></li><li><a href="/plans">Plans</a></li><li><a href="/learnings">Learnings</a></li><li><a href="/provenance">Provenance</a></li></ul></div>
+-   <main><div><p><a href="https://main--aem-boilerplate--adobe.hlx.page/">Boilerplate</a></p><p><br></p></div><div><ul><li><p>Example Content</p><ul><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Default Content</a></li></ul></li><li><p>Getting Started</p><ul><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Build your first site</a></li><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Preview and publish content</a></li><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Organize your content</a></li></ul></li><li><p>Documentation</p><ul><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Architecture</a></li><li><a href="https://main--aem-boilerplate--adobe.hlx.page/">Sidekick</a></li></ul></li></ul><p><br></p></div><div><p><br></p><p>:search:</p><p><br><br></p><div class="metadata"><div><div><p>Robots</p></div><div><p>noindex, nofollow</p></div></div></div><p><br><br><br><br><br></p></div></main>
++ <div></div>
+-   <footer></footer>
++ </main><footer></footer></body>
+- </body>
++ 
+- 
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /nav.html
+  Source: atlas/fixtures/nav.html
+  Paths: 1
+    /nav.html
+  Note: Render preflight: 3 section(s), 0 block(s).
+Uploaded /nav.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/nav.html",
+  "data": {
+    "mode": "committed",
+    "path": "/nav.html",
+    "source": "atlas/fixtures/nav.html"
+  },
+  "changes": [
+    "/nav.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /nav.html"
+  ]
+}
+-> preview-nav: preview page /nav --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /nav
+  Paths: 1
+    /nav
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /nav
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/nav",
+  "data": {
+    "mode": "committed",
+    "path": "/nav",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/nav"
+  },
+  "changes": [
+    "/nav"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /nav"
+  ]
+}
+-> put-footer: content put /footer.html atlas/fixtures/footer.html --format json
+Diff for /footer.html:
+- 
++ <body><header></header><main><div>
+- <body>
++ <p><strong>DA Lifecycle Atlas</strong> — visual field guides built as part of the da-cli 0.6.0 second-site proof.</p>
+-   <header></header>
++ <p><a href="/explainers/helix-5-to-helix-6">Helix 5 → 6</a> <a href="/plans">Plans</a> <a href="/learnings">Learnings</a> <a href="/provenance">Provenance</a></p>
+-   <main><div><p><br></p><p>Copyright © 2025 Adobe. All rights reserved.</p><p><a href="https://www.adobe.com/privacy.html">Privacy</a> / <a href="https://www.adobe.com/legal/terms.html">Terms of Use</a> / <a href="https://main--helix-project-boilerplate--adobe.hlx.page/footer#consent">Cookie preferences</a> / <a href="https://www.adobe.com/privacy/ca-rights.html">Do not sell my personal information</a> /<a href="https://www.adobe.com/privacy/opt-out.html#interest-based-ads"> AdChoices</a> </p><p><br></p><div class="metadata"><div><div><p>Robots</p></div><div><p>noindex, nofollow</p></div></div></div><p><br><br></p></div></main>
++ <p>DA owns the narrative · blocks own presentation · proof owns the release.</p>
+-   <footer></footer>
++ </div></main><footer></footer></body>
+- </body>
++ 
+- 
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /footer.html
+  Source: atlas/fixtures/footer.html
+  Paths: 1
+    /footer.html
+  Note: Render preflight: 1 section(s), 0 block(s).
+Uploaded /footer.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/footer.html",
+  "data": {
+    "mode": "committed",
+    "path": "/footer.html",
+    "source": "atlas/fixtures/footer.html"
+  },
+  "changes": [
+    "/footer.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /footer.html"
+  ]
+}
+-> preview-footer: preview page /footer --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /footer
+  Paths: 1
+    /footer
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /footer
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/footer",
+  "data": {
+    "mode": "committed",
+    "path": "/footer",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/footer"
+  },
+  "changes": [
+    "/footer"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /footer"
+  ]
+}
+-> put-helix-explainer: content put /explainers/helix-5-to-helix-6.html atlas/fixtures/explainers/helix-5-to-helix-6.html --format json
+New document: /explainers/helix-5-to-helix-6.html
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /explainers/helix-5-to-helix-6.html
+  Source: atlas/fixtures/explainers/helix-5-to-helix-6.html
+  Paths: 1
+    /explainers/helix-5-to-helix-6.html
+  Note: Render preflight: 10 section(s), 10 block(s).
+  Note: New DA source; canonical live route /explainers/helix-5-to-helix-6 currently returns 404.
+Uploaded /explainers/helix-5-to-helix-6.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/explainers/helix-5-to-helix-6.html",
+  "data": {
+    "mode": "committed",
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "source": "atlas/fixtures/explainers/helix-5-to-helix-6.html"
+  },
+  "changes": [
+    "/explainers/helix-5-to-helix-6.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /explainers/helix-5-to-helix-6.html"
+  ]
+}
+-> preview-helix-explainer: preview page /explainers/helix-5-to-helix-6 --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /explainers/helix-5-to-helix-6
+  Paths: 1
+    /explainers/helix-5-to-helix-6
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /explainers/helix-5-to-helix-6
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/explainers/helix-5-to-helix-6",
+  "data": {
+    "mode": "committed",
+    "path": "/explainers/helix-5-to-helix-6",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/explainers/helix-5-to-helix-6"
+  },
+  "changes": [
+    "/explainers/helix-5-to-helix-6"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /explainers/helix-5-to-helix-6"
+  ]
+}
+-> put-plans: content put /plans.html atlas/fixtures/plans.html --format json
+New document: /plans.html
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /plans.html
+  Source: atlas/fixtures/plans.html
+  Paths: 1
+    /plans.html
+  Note: Render preflight: 5 section(s), 4 block(s).
+  Note: New DA source; canonical live route /plans currently returns 404.
+Uploaded /plans.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/plans.html",
+  "data": {
+    "mode": "committed",
+    "path": "/plans.html",
+    "source": "atlas/fixtures/plans.html"
+  },
+  "changes": [
+    "/plans.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /plans.html"
+  ]
+}
+-> preview-plans: preview page /plans --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /plans
+  Paths: 1
+    /plans
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /plans
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/plans",
+  "data": {
+    "mode": "committed",
+    "path": "/plans",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/plans"
+  },
+  "changes": [
+    "/plans"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /plans"
+  ]
+}
+-> put-learnings: content put /learnings.html atlas/fixtures/learnings.html --format json
+New document: /learnings.html
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /learnings.html
+  Source: atlas/fixtures/learnings.html
+  Paths: 1
+    /learnings.html
+  Note: Render preflight: 5 section(s), 3 block(s).
+  Note: New DA source; canonical live route /learnings currently returns 404.
+Uploaded /learnings.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/learnings.html",
+  "data": {
+    "mode": "committed",
+    "path": "/learnings.html",
+    "source": "atlas/fixtures/learnings.html"
+  },
+  "changes": [
+    "/learnings.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /learnings.html"
+  ]
+}
+-> preview-learnings: preview page /learnings --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /learnings
+  Paths: 1
+    /learnings
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /learnings
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/learnings",
+  "data": {
+    "mode": "committed",
+    "path": "/learnings",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/learnings"
+  },
+  "changes": [
+    "/learnings"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /learnings"
+  ]
+}
+-> put-provenance: content put /provenance.html atlas/fixtures/provenance.html --format json
+New document: /provenance.html
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /provenance.html
+  Source: atlas/fixtures/provenance.html
+  Paths: 1
+    /provenance.html
+  Note: Render preflight: 5 section(s), 3 block(s).
+  Note: New DA source; canonical live route /provenance currently returns 404.
+Uploaded /provenance.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/provenance.html",
+  "data": {
+    "mode": "committed",
+    "path": "/provenance.html",
+    "source": "atlas/fixtures/provenance.html"
+  },
+  "changes": [
+    "/provenance.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /provenance.html"
+  ]
+}
+-> preview-provenance: preview page /provenance --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /provenance
+  Paths: 1
+    /provenance
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /provenance
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/provenance",
+  "data": {
+    "mode": "committed",
+    "path": "/provenance",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/provenance"
+  },
+  "changes": [
+    "/provenance"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /provenance"
+  ]
+}
+-> contracts: audit contracts --prefix / --verify-code --format json
+Scanning 7 pages for block contracts…
+{
+  "prefix": "/",
+  "scannedPages": 7,
+  "blocks": [
+    {
+      "block": "accordion",
+      "pages": 1,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-compare",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-flow",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-grid",
+      "pages": 4,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-hero",
+      "pages": 5,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "fragment",
+      "pages": 0,
+      "source": "autoblock",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "table",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "widget",
+      "pages": 0,
+      "source": "autoblock",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    }
+  ],
+  "autoblocks": [
+    "fragment",
+    "widget"
+  ],
+  "missing": [],
+  "errors": [],
+  "localGit": {
+    "available": true,
+    "root": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+    "branch": "feature-wave-6-full-da-site",
+    "upstream": "origin/feature-wave-6-full-da-site",
+    "ahead": 0,
+    "unpushedBlockChanges": [],
+    "trackedAuthoredContent": [],
+    "detail": "No local unpushed changes found for authored block implementations."
+  }
+}
+-> freshness: site freshness / --format json
+[
+  {
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:24.513Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:26.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 404,
+    "liveLastModified": "",
+    "liveFreshness": "unknown",
+    "verdict": "preview-only",
+    "next": [
+      "da --commit publish page /explainers/helix-5-to-helix-6.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/explainers/helix-5-to-helix-6",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/explainers/helix-5-to-helix-6"
+  },
+  {
+    "path": "/footer.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:21.323Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:23.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T02:43:04.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /footer.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/footer",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/footer"
+  },
+  {
+    "path": "/index.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:13.451Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:16.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T02:43:04.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /index.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/"
+  },
+  {
+    "path": "/learnings.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:31.107Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:33.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 404,
+    "liveLastModified": "",
+    "liveFreshness": "unknown",
+    "verdict": "preview-only",
+    "next": [
+      "da --commit publish page /learnings.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/learnings",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/learnings"
+  },
+  {
+    "path": "/nav.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:17.787Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:20.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T02:43:04.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /nav.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/nav",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/nav"
+  },
+  {
+    "path": "/plans.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:27.850Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:30.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 404,
+    "liveLastModified": "",
+    "liveFreshness": "unknown",
+    "verdict": "preview-only",
+    "next": [
+      "da --commit publish page /plans.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/plans",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/plans"
+  },
+  {
+    "path": "/provenance.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T03:23:34.608Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T03:23:37.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 404,
+    "liveLastModified": "",
+    "liveFreshness": "unknown",
+    "verdict": "preview-only",
+    "next": [
+      "da --commit publish page /provenance.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/provenance",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/provenance"
+  }
+]
+-> code-proof: code verify /blocks/atlas-hero/atlas-hero.js --target preview --contains decorate --format json
+{
+  "ok": true,
+  "path": "/blocks/atlas-hero/atlas-hero.js",
+  "target": "preview",
+  "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/blocks/atlas-hero/atlas-hero.js",
+  "status": 200,
+  "bytes": 593,
+  "contains": "decorate",
+  "containsFound": true
+}

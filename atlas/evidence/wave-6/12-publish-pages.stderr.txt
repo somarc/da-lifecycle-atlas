@@ -1,0 +1,15 @@
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: publish pages / /nav /footer /explainers/helix-5-to-helix-6 /plans /learnings /provenance
+  Source: / /nav /footer /explainers/helix-5-to-helix-6 /plans /learnings /provenance
+  Paths: 7
+    /index.html
+    /nav.html
+    /footer.html
+    /explainers/helix-5-to-helix-6.html
+    /plans.html
+    /learnings.html
+    /provenance.html
+Publishing 7 page(s) with concurrency 5…

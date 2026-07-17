@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "operation": "pipeline.run",
+  "target": "atlas/construct.yaml",
+  "data": {
+    "runId": "20c25dde",
+    "name": "da-lifecycle-atlas-wave-6-construct",
+    "status": "completed",
+    "startedAt": "2026-07-17T12:00:25.612Z",
+    "completedAt": "2026-07-17T12:00:52.716Z",
+    "steps": {
+      "put-helix-transition-media": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:26.778Z"
+      },
+      "put-index": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:28.111Z"
+      },
+      "preview-index": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:30.441Z"
+      },
+      "put-nav": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:31.657Z"
+      },
+      "preview-nav": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:33.448Z"
+      },
+      "put-footer": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:34.795Z"
+      },
+      "preview-footer": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:36.507Z"
+      },
+      "put-helix-explainer": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:37.881Z"
+      },
+      "preview-helix-explainer": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:40.263Z"
+      },
+      "put-plans": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:41.539Z"
+      },
+      "preview-plans": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:43.329Z"
+      },
+      "put-learnings": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:44.616Z"
+      },
+      "preview-learnings": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:46.376Z"
+      },
+      "put-provenance": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:47.633Z"
+      },
+      "preview-provenance": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:49.319Z"
+      },
+      "contracts": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:50.860Z"
+      },
+      "freshness": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:52.465Z"
+      },
+      "code-proof": {
+        "status": "completed",
+        "exitCode": 0,
+        "attempts": 1,
+        "retries": 0,
+        "completedAt": "2026-07-17T12:00:52.715Z"
+      }
+    }
+  },
+  "warnings": [],
+  "next": [
+    "da --format json pipeline status 20c25dde"
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da/runs/20c25dde/result.json"
+    }
+  ]
+}

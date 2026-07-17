@@ -1,0 +1,660 @@
+Pipeline run 20c25dde started: da-lifecycle-atlas-wave-6-construct
+State: /Users/mhess/.da/pipeline-runs/20c25dde.json
+Result: /Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.da/runs/20c25dde/result.json
+-> put-helix-transition-media: content put /media/atlas/helix-transition.jpg media/atlas/helix-transition.jpg --format json
+Binary upload: /media/atlas/helix-transition.jpg (image/jpeg, 355.0 KB)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /media/atlas/helix-transition.jpg
+  Source: media/atlas/helix-transition.jpg
+  Paths: 1
+    /media/atlas/helix-transition.jpg
+  Note: Binary asset upload; text diff and HTML fragment checks are skipped.
+Uploaded /media/atlas/helix-transition.jpg
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/media/atlas/helix-transition.jpg",
+  "data": {
+    "mode": "committed",
+    "path": "/media/atlas/helix-transition.jpg",
+    "source": "media/atlas/helix-transition.jpg"
+  },
+  "changes": [
+    "/media/atlas/helix-transition.jpg"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /media/atlas/helix-transition.jpg"
+  ]
+}
+-> put-index: content put /index.html atlas/fixtures/index.html --format json
+Diff for /index.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /index.html
+  Source: atlas/fixtures/index.html
+  Paths: 1
+    /index.html
+  Note: Render preflight: 5 section(s), 4 block(s).
+Uploaded /index.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/index.html",
+  "data": {
+    "mode": "committed",
+    "path": "/index.html",
+    "source": "atlas/fixtures/index.html"
+  },
+  "changes": [
+    "/index.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /index.html"
+  ]
+}
+-> preview-index: preview page /index --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /index
+  Paths: 1
+    /index
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /index
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/index",
+  "data": {
+    "mode": "committed",
+    "path": "/index",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/"
+  },
+  "changes": [
+    "/index"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /index"
+  ]
+}
+-> put-nav: content put /nav.html atlas/fixtures/nav.html --format json
+Diff for /nav.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /nav.html
+  Source: atlas/fixtures/nav.html
+  Paths: 1
+    /nav.html
+  Note: Render preflight: 3 section(s), 0 block(s).
+Uploaded /nav.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/nav.html",
+  "data": {
+    "mode": "committed",
+    "path": "/nav.html",
+    "source": "atlas/fixtures/nav.html"
+  },
+  "changes": [
+    "/nav.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /nav.html"
+  ]
+}
+-> preview-nav: preview page /nav --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /nav
+  Paths: 1
+    /nav
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /nav
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/nav",
+  "data": {
+    "mode": "committed",
+    "path": "/nav",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/nav"
+  },
+  "changes": [
+    "/nav"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /nav"
+  ]
+}
+-> put-footer: content put /footer.html atlas/fixtures/footer.html --format json
+Diff for /footer.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /footer.html
+  Source: atlas/fixtures/footer.html
+  Paths: 1
+    /footer.html
+  Note: Render preflight: 1 section(s), 0 block(s).
+Uploaded /footer.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/footer.html",
+  "data": {
+    "mode": "committed",
+    "path": "/footer.html",
+    "source": "atlas/fixtures/footer.html"
+  },
+  "changes": [
+    "/footer.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /footer.html"
+  ]
+}
+-> preview-footer: preview page /footer --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /footer
+  Paths: 1
+    /footer
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /footer
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/footer",
+  "data": {
+    "mode": "committed",
+    "path": "/footer",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/footer"
+  },
+  "changes": [
+    "/footer"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /footer"
+  ]
+}
+-> put-helix-explainer: content put /explainers/helix-5-to-helix-6.html atlas/fixtures/explainers/helix-5-to-helix-6.html --format json
+Diff for /explainers/helix-5-to-helix-6.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /explainers/helix-5-to-helix-6.html
+  Source: atlas/fixtures/explainers/helix-5-to-helix-6.html
+  Paths: 1
+    /explainers/helix-5-to-helix-6.html
+  Note: Render preflight: 10 section(s), 10 block(s).
+Uploaded /explainers/helix-5-to-helix-6.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/explainers/helix-5-to-helix-6.html",
+  "data": {
+    "mode": "committed",
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "source": "atlas/fixtures/explainers/helix-5-to-helix-6.html"
+  },
+  "changes": [
+    "/explainers/helix-5-to-helix-6.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /explainers/helix-5-to-helix-6.html"
+  ]
+}
+-> preview-helix-explainer: preview page /explainers/helix-5-to-helix-6 --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /explainers/helix-5-to-helix-6
+  Paths: 1
+    /explainers/helix-5-to-helix-6
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /explainers/helix-5-to-helix-6
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/explainers/helix-5-to-helix-6",
+  "data": {
+    "mode": "committed",
+    "path": "/explainers/helix-5-to-helix-6",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/explainers/helix-5-to-helix-6"
+  },
+  "changes": [
+    "/explainers/helix-5-to-helix-6"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /explainers/helix-5-to-helix-6"
+  ]
+}
+-> put-plans: content put /plans.html atlas/fixtures/plans.html --format json
+Diff for /plans.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /plans.html
+  Source: atlas/fixtures/plans.html
+  Paths: 1
+    /plans.html
+  Note: Render preflight: 5 section(s), 4 block(s).
+Uploaded /plans.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/plans.html",
+  "data": {
+    "mode": "committed",
+    "path": "/plans.html",
+    "source": "atlas/fixtures/plans.html"
+  },
+  "changes": [
+    "/plans.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /plans.html"
+  ]
+}
+-> preview-plans: preview page /plans --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /plans
+  Paths: 1
+    /plans
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /plans
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/plans",
+  "data": {
+    "mode": "committed",
+    "path": "/plans",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/plans"
+  },
+  "changes": [
+    "/plans"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /plans"
+  ]
+}
+-> put-learnings: content put /learnings.html atlas/fixtures/learnings.html --format json
+Diff for /learnings.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /learnings.html
+  Source: atlas/fixtures/learnings.html
+  Paths: 1
+    /learnings.html
+  Note: Render preflight: 7 section(s), 3 block(s).
+Uploaded /learnings.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/learnings.html",
+  "data": {
+    "mode": "committed",
+    "path": "/learnings.html",
+    "source": "atlas/fixtures/learnings.html"
+  },
+  "changes": [
+    "/learnings.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /learnings.html"
+  ]
+}
+-> preview-learnings: preview page /learnings --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /learnings
+  Paths: 1
+    /learnings
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /learnings
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/learnings",
+  "data": {
+    "mode": "committed",
+    "path": "/learnings",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/learnings"
+  },
+  "changes": [
+    "/learnings"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /learnings"
+  ]
+}
+-> put-provenance: content put /provenance.html atlas/fixtures/provenance.html --format json
+Diff for /provenance.html:
+(no changes)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /provenance.html
+  Source: atlas/fixtures/provenance.html
+  Paths: 1
+    /provenance.html
+  Note: Render preflight: 5 section(s), 3 block(s).
+Uploaded /provenance.html
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/provenance.html",
+  "data": {
+    "mode": "committed",
+    "path": "/provenance.html",
+    "source": "atlas/fixtures/provenance.html"
+  },
+  "changes": [
+    "/provenance.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /provenance.html"
+  ]
+}
+-> preview-provenance: preview page /provenance --format json
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: preview page /provenance
+  Paths: 1
+    /provenance
+  Note: Preview mutates aem.page/code pipeline state but does not publish to live.
+Triggering preview: /provenance
+{
+  "ok": true,
+  "operation": "preview.page",
+  "target": "somarc/da-lifecycle-atlas/provenance",
+  "data": {
+    "mode": "committed",
+    "path": "/provenance",
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/provenance"
+  },
+  "changes": [
+    "/provenance"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit publish page /provenance"
+  ]
+}
+-> contracts: audit contracts --prefix / --verify-code --format json
+Scanning 7 pages for block contracts…
+{
+  "prefix": "/",
+  "scannedPages": 7,
+  "blocks": [
+    {
+      "block": "accordion",
+      "pages": 1,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-compare",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-flow",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-grid",
+      "pages": 4,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "atlas-hero",
+      "pages": 5,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "fragment",
+      "pages": 0,
+      "source": "autoblock",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "table",
+      "pages": 2,
+      "source": "page",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    },
+    {
+      "block": "widget",
+      "pages": 0,
+      "source": "autoblock",
+      "js": 200,
+      "css": 200,
+      "status": "ok",
+      "localChanges": 0
+    }
+  ],
+  "autoblocks": [
+    "fragment",
+    "widget"
+  ],
+  "missing": [],
+  "errors": [],
+  "localGit": {
+    "available": true,
+    "root": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas",
+    "branch": "feature-wave-6-full-da-site",
+    "upstream": "origin/feature-wave-6-full-da-site",
+    "ahead": 0,
+    "unpushedBlockChanges": [],
+    "trackedAuthoredContent": [],
+    "detail": "No local unpushed changes found for authored block implementations."
+  }
+}
+-> freshness: site freshness / --format json
+[
+  {
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:37.764Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:40.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T11:50:05.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /explainers/helix-5-to-helix-6.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/explainers/helix-5-to-helix-6",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/explainers/helix-5-to-helix-6"
+  },
+  {
+    "path": "/footer.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:34.678Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:36.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T03:29:49.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /footer.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/footer",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/footer"
+  },
+  {
+    "path": "/index.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:27.972Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:30.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T11:50:05.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /index.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/"
+  },
+  {
+    "path": "/learnings.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:44.540Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:46.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T11:51:36.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /learnings.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/learnings",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/learnings"
+  },
+  {
+    "path": "/nav.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:31.535Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:33.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T03:29:49.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /nav.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/nav",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/nav"
+  },
+  {
+    "path": "/plans.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:41.407Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:43.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T03:29:49.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /plans.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/plans",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/plans"
+  },
+  {
+    "path": "/provenance.html",
+    "sourceStatus": 200,
+    "sourceLastModified": "2026-07-17T12:00:47.540Z",
+    "previewStatus": 200,
+    "previewLastModified": "2026-07-17T12:00:49.000Z",
+    "previewFreshness": "fresh",
+    "liveStatus": 200,
+    "liveLastModified": "2026-07-17T03:29:50.000Z",
+    "liveFreshness": "stale",
+    "verdict": "live-stale",
+    "next": [
+      "da --commit publish page /provenance.html"
+    ],
+    "previewUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/provenance",
+    "liveUrl": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.live/provenance"
+  }
+]
+-> code-proof: code verify /blocks/atlas-hero/atlas-hero.js --target preview --contains decorate --format json
+{
+  "ok": true,
+  "path": "/blocks/atlas-hero/atlas-hero.js",
+  "target": "preview",
+  "url": "https://feature-wave-6-full-da-site--da-lifecycle-atlas--somarc.aem.page/blocks/atlas-hero/atlas-hero.js",
+  "status": 200,
+  "bytes": 593,
+  "contains": "decorate",
+  "containsFound": true
+}

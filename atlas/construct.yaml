@@ -1,0 +1,71 @@
+name: da-lifecycle-atlas-wave-6-construct
+# Rebuilds DA-authored Atlas content from checked-in fixtures and stops at preview.
+# Root --commit is the single DA mutation boundary. Publishing remains a separate human promotion.
+# Plan:
+#   da --org somarc --repo da-lifecycle-atlas --branch feature-wave-6-full-da-site pipeline run atlas/construct.yaml --dry-run --format json
+# Run:
+#   da --org somarc --repo da-lifecycle-atlas --branch feature-wave-6-full-da-site --commit pipeline run atlas/construct.yaml --format json
+steps:
+  - id: put-helix-transition-media
+    command: content put /media/atlas/helix-transition.jpg media/atlas/helix-transition.jpg --format json
+
+  - id: put-index
+    command: content put /index.html atlas/fixtures/index.html --format json
+    depends_on: [put-helix-transition-media]
+  - id: preview-index
+    command: preview page /index --format json
+    depends_on: [put-index]
+
+  - id: put-nav
+    command: content put /nav.html atlas/fixtures/nav.html --format json
+    depends_on: [preview-index]
+  - id: preview-nav
+    command: preview page /nav --format json
+    depends_on: [put-nav]
+
+  - id: put-footer
+    command: content put /footer.html atlas/fixtures/footer.html --format json
+    depends_on: [preview-nav]
+  - id: preview-footer
+    command: preview page /footer --format json
+    depends_on: [put-footer]
+
+  - id: put-helix-explainer
+    command: content put /explainers/helix-5-to-helix-6.html atlas/fixtures/explainers/helix-5-to-helix-6.html --format json
+    depends_on: [preview-footer]
+  - id: preview-helix-explainer
+    command: preview page /explainers/helix-5-to-helix-6 --format json
+    depends_on: [put-helix-explainer]
+
+  - id: put-plans
+    command: content put /plans.html atlas/fixtures/plans.html --format json
+    depends_on: [preview-helix-explainer]
+  - id: preview-plans
+    command: preview page /plans --format json
+    depends_on: [put-plans]
+
+  - id: put-learnings
+    command: content put /learnings.html atlas/fixtures/learnings.html --format json
+    depends_on: [preview-plans]
+  - id: preview-learnings
+    command: preview page /learnings --format json
+    depends_on: [put-learnings]
+
+  - id: put-provenance
+    command: content put /provenance.html atlas/fixtures/provenance.html --format json
+    depends_on: [preview-learnings]
+  - id: preview-provenance
+    command: preview page /provenance --format json
+    depends_on: [put-provenance]
+
+  - id: contracts
+    command: audit contracts --prefix / --verify-code --format json
+    depends_on: [preview-provenance]
+
+  - id: freshness
+    command: site freshness / --format json
+    depends_on: [contracts]
+
+  - id: code-proof
+    command: code verify /blocks/atlas-hero/atlas-hero.js --target preview --contains decorate --format json
+    depends_on: [freshness]

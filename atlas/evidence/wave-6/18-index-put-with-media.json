@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/index.html",
+  "data": {
+    "mode": "committed",
+    "path": "/index.html",
+    "source": "atlas/fixtures/index.html"
+  },
+  "changes": [
+    "/index.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /index.html"
+  ]
+}

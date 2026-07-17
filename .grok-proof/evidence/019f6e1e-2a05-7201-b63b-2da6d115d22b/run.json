@@ -1,0 +1,47 @@
+{
+  "claim": {
+    "notClaimed": [
+      "deterministic regeneration",
+      "byte-identical replay",
+      "automatic visual acceptance"
+    ],
+    "type": "recorded-single-generation"
+  },
+  "contractHashes": {
+    "prompt": "3520121fe502fd93f4d81711e0fd4e2fd1fee7926021505734611889115f812d",
+    "wrapper": "c37be850a9e088ccf079440c1675edb230a9f5cbcc8356ee95654b334e380baa",
+    "yaml": "ef0065d018fc611b06f7ed1709b414232528f72ff51d340019e7b58cff5daec9"
+  },
+  "grok": {
+    "binarySha256": "1e424cf7264589f8e9ecf316acd34e486d0ff5f3bedbefe6832fb63f0fe89768",
+    "version": "grok 0.2.102 (ab5ebf69acec) [stable]"
+  },
+  "invocation": {
+    "credentials": "not supplied, read, printed, or copied by wrapper",
+    "memory": "disabled",
+    "mode": "headless /imagine",
+    "subagents": "disabled",
+    "toolAllowlist": [
+      "image_gen"
+    ],
+    "webSearch": "disabled"
+  },
+  "recordedAt": "2026-07-17T03:28:31.558581Z",
+  "repository": {
+    "head": "eb917e0ef3ee63ebe892405bb1dcbd6941b22118"
+  },
+  "result": {
+    "dimensionsProbe": "/Users/mhess/aem/aem-code/da/da-lifecycle-atlas/.grok-proof/evidence/019f6e1e-2a05-7201-b63b-2da6d115d22b/1.jpg pixelWidth: 1280 pixelHeight: 720 ",
+    "evidenceImage": "1.jpg",
+    "headlessOutputSha256": "9b59bbd44a4f8dbf8122724d1886326434400b62f9a509e1c6f221ce44c2b635",
+    "imageSha256": "01eb7cd68e563ab73f2412a7047c8211e80a7c995a0d75f8b73c71c43b467af0",
+    "mimeType": "image/jpeg",
+    "sessionId": "019f6e1e-2a05-7201-b63b-2da6d115d22b"
+  },
+  "review": {
+    "decision": "promote-to-atlas",
+    "promotedPath": "media/atlas/helix-transition.jpg",
+    "status": "human-approved"
+  },
+  "schema": "atlas-grok-imagine-evidence/v1"
+}

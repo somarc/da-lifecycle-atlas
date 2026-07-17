@@ -1,0 +1,303 @@
+{
+  "ok": true,
+  "operation": "pipeline.plan",
+  "target": "atlas/construct.yaml",
+  "data": {
+    "name": "da-lifecycle-atlas-wave-6-construct",
+    "context": {},
+    "steps": [
+      {
+        "id": "put-helix-transition-media",
+        "command": "content put /media/atlas/helix-transition.jpg media/atlas/helix-transition.jpg --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-index",
+        "command": "content put /index.html atlas/fixtures/index.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-helix-transition-media"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-index",
+        "command": "preview page /index --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-index"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-nav",
+        "command": "content put /nav.html atlas/fixtures/nav.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-index"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-nav",
+        "command": "preview page /nav --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-nav"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-footer",
+        "command": "content put /footer.html atlas/fixtures/footer.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-nav"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-footer",
+        "command": "preview page /footer --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-footer"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-helix-explainer",
+        "command": "content put /explainers/helix-5-to-helix-6.html atlas/fixtures/explainers/helix-5-to-helix-6.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-footer"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-helix-explainer",
+        "command": "preview page /explainers/helix-5-to-helix-6 --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-helix-explainer"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-plans",
+        "command": "content put /plans.html atlas/fixtures/plans.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-helix-explainer"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-plans",
+        "command": "preview page /plans --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-plans"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-learnings",
+        "command": "content put /learnings.html atlas/fixtures/learnings.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-plans"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-learnings",
+        "command": "preview page /learnings --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-learnings"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "put-provenance",
+        "command": "content put /provenance.html atlas/fixtures/provenance.html --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-learnings"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "preview-provenance",
+        "command": "preview page /provenance --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "put-provenance"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "contracts",
+        "command": "audit contracts --prefix / --verify-code --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "preview-provenance"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "freshness",
+        "command": "site freshness / --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "contracts"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      },
+      {
+        "id": "code-proof",
+        "command": "code verify /blocks/atlas-hero/atlas-hero.js --target preview --contains decorate --format json",
+        "if": null,
+        "retry": null,
+        "depends_on": [
+          "freshness"
+        ],
+        "requires_approval": false,
+        "timeout": null,
+        "continue_on_error": false,
+        "reconcile": null
+      }
+    ],
+    "batches": [
+      [
+        "put-helix-transition-media"
+      ],
+      [
+        "put-index"
+      ],
+      [
+        "preview-index"
+      ],
+      [
+        "put-nav"
+      ],
+      [
+        "preview-nav"
+      ],
+      [
+        "put-footer"
+      ],
+      [
+        "preview-footer"
+      ],
+      [
+        "put-helix-explainer"
+      ],
+      [
+        "preview-helix-explainer"
+      ],
+      [
+        "put-plans"
+      ],
+      [
+        "preview-plans"
+      ],
+      [
+        "put-learnings"
+      ],
+      [
+        "preview-learnings"
+      ],
+      [
+        "put-provenance"
+      ],
+      [
+        "preview-provenance"
+      ],
+      [
+        "contracts"
+      ],
+      [
+        "freshness"
+      ],
+      [
+        "code-proof"
+      ]
+    ]
+  },
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --branch feature-wave-6-full-da-site --format json pipeline run atlas/construct.yaml"
+  ]
+}

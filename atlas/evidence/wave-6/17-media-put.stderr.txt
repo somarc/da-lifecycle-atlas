@@ -1,0 +1,11 @@
+Binary upload: /media/atlas/helix-transition.jpg (image/jpeg, 355.0 KB)
+Write preflight:
+  Target: somarc/da-lifecycle-atlas
+  Branch: feature-wave-6-full-da-site
+  Config: org=flag, repo=flag, branch=flag
+  Operation: content put /media/atlas/helix-transition.jpg
+  Source: media/atlas/helix-transition.jpg
+  Paths: 1
+    /media/atlas/helix-transition.jpg
+  Note: Binary asset upload; text diff and HTML fragment checks are skipped.
+Uploaded /media/atlas/helix-transition.jpg
