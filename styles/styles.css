@@ -38,6 +38,17 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* DA Lifecycle Atlas */
+  --atlas-surface: #fffdf7;
+  --atlas-paper-2: #ebe3d3;
+  --atlas-line: #c9bfad;
+  --atlas-rust: #b44e2f;
+  --atlas-teal: #176b68;
+  --atlas-gold: #a97922;
+  --atlas-shadow: 0 18px 50px rgb(48 39 24 / 10%);
+  --text-color-muted: #68716a;
+  --mono-font-family: ui-monospace, sfmono-regular, consolas, monospace;
 }
 
 /* fallback fonts */
@@ -73,11 +84,17 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background:
+    radial-gradient(circle at 15% 0%, rgb(195 149 62 / 12%), transparent 30rem),
+    var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+}
+
+body:not(.appear) {
+  visibility: hidden;
 }
 
 body.appear {
@@ -106,10 +123,33 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
+  font-family: georgia, 'Times New Roman', serif;
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+}
+
+code {
+  font-family: var(--mono-font-family);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #17201d;
+    --light-color: #202b27;
+    --dark-color: #f1ebdf;
+    --text-color: #f1ebdf;
+    --link-color: #69c7bd;
+    --link-hover-color: #e0b967;
+    --atlas-surface: #222c28;
+    --atlas-paper-2: #202b27;
+    --atlas-line: #3d4b45;
+    --atlas-rust: #e78361;
+    --atlas-teal: #69c7bd;
+    --atlas-gold: #e0b967;
+    --atlas-shadow: 0 18px 55px rgb(0 0 0 / 25%);
+    --text-color-muted: #aeb8b0;
+  }
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -127,6 +167,21 @@ pre,
 blockquote {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
+}
+
+main > .section:not(:first-of-type) > .default-content-wrapper > h2:first-child {
+  max-width: 920px;
+  margin-top: 0;
+  font-size: clamp(40px, 5vw, 70px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+main > .section:not(:first-of-type) > .default-content-wrapper > h2:first-child + p {
+  max-width: 760px;
+  color: var(--text-color-muted);
+  font-size: var(--body-font-size-m);
 }
 
 code,
@@ -298,6 +353,7 @@ main img {
 /* sections */
 main > .section {
   margin: 40px 0;
+  padding-block: 34px;
 }
 
 main > .section > div {

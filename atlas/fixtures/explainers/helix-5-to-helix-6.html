@@ -1,0 +1,138 @@
+<body>
+  <header></header>
+  <main>
+    <div>
+      <div class="atlas-hero">
+        <div>
+          <div>
+            <p>No prior Helix knowledge required</p>
+            <h1>Helix 5 → Helix 6</h1>
+            <p>The short version: Adobe is turning two control desks with different rules into one front door with a more consistent map.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Two buildings become one campus.</h2>
+      <p>Forget implementation detail for a moment. In Helix 5, authoring and site operations live behind different doors. Helix 6 pulls them under one service.</p>
+      <div class="atlas-compare">
+        <div>
+          <div>
+            <p>Helix 5 · today</p>
+            <h3>Two control desks</h3>
+            <p>A client must know which building owns which job.</p>
+            <p><strong>DA Admin</strong><br><code>admin.da.live</code><br>source files · lists · versions</p>
+            <p><strong>Helix Admin</strong><br><code>admin.hlx.page</code><br>preview · publish · status · code</p>
+          </div>
+          <div>
+            <p>Helix 6 · emerging</p>
+            <h3>One front door</h3>
+            <p>The same service understands content, lifecycle, code, configuration, and jobs.</p>
+            <p><strong>AEM Admin API</strong><br><code>api.aem.live/{org}/sites/{site}/…</code></p>
+            <p><strong>Special lane for code</strong><br><code>/{owner}/repos/{repo}/code/{ref}/…</code></p>
+          </div>
+        </div>
+      </div>
+      <blockquote><strong>Plain English:</strong> H6 is mostly a control-plane redesign. It changes how tools talk to Adobe services—not the idea of a webpage itself.</blockquote>
+    </div>
+
+    <div>
+      <h2>Follow one request: “Preview my About page.”</h2>
+      <p>The client intent stays the same, but the address and routing change.</p>
+      <h3>Helix 5 route</h3>
+      <div class="atlas-flow">
+        <div><div>You / da-cli</div><div><strong>Preview</strong><br>/about.html</div><div>intent</div></div>
+        <div><div>First stop</div><div><strong>DA flush</strong></div><div>admin.da.live/preview/acme/site/about.html</div></div>
+        <div><div>Second stop</div><div><strong>Helix preview</strong></div><div>admin.hlx.page/preview/acme/site/main/about</div></div>
+      </div>
+      <h3>Helix 6 route</h3>
+      <div class="atlas-flow">
+        <div><div>You / da-cli</div><div><strong>Preview</strong><br>/about.html</div><div>intent</div></div>
+        <div><div>One front door</div><div><strong>Site preview</strong></div><div>api.aem.live/acme/sites/site/preview/about</div></div>
+        <div><div>Result</div><div><strong>Status + links</strong></div><div>webPath · preview · live · jobs</div></div>
+      </div>
+      <p><strong>The subtle part:</strong> H5 puts <code>main</code>, the code branch, inside most operation URLs. H6 site lifecycle URLs do not. Code still has its own branch-aware route.</p>
+    </div>
+
+    <div>
+      <h2>The four changes that matter.</h2>
+      <p>If you remember these four cards, you understand most of the migration risk.</p>
+      <div class="atlas-grid changes">
+        <div><div><p>Change 01</p><h3>The front door changes</h3><p><code>admin.da.live</code> + <code>admin.hlx.page</code> → <code>api.aem.live</code></p><p>A client must detect which door a particular site uses. The rollout is per-site, not one global switch.</p></div></div>
+        <div><div><p>Change 02</p><h3>The address reads like a resource</h3><p><code>/preview/org/site/main/about</code> → <code>/org/sites/site/preview/about</code></p><p>Site identity moves to the front. The branch disappears from lifecycle operations.</p></div></div>
+        <div><div><p>Change 03</p><h3>The message body changes</h3><p>DA multipart form field → H6 raw body with an explicit content type.</p><p>Lists, copy/move, versions, bulk operations, and jobs also have different wire shapes.</p></div></div>
+        <div><div><p>Change 04</p><h3>Branch belongs to code</h3><p>H5 habit: branch in nearly every admin URL. H6 model: site lifecycle plus a repo/ref code lane.</p><p>Content/site operations and Git code operations become two explicit coordinate systems.</p></div></div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Where the familiar jobs go.</h2>
+      <p>The left side shows today’s split. The right side shows the H6 resource families.</p>
+      <div class="table">
+        <div><div>Capability</div><div>Helix 5 / DA</div><div>Helix 6</div></div>
+        <div><div>Source</div><div><code>admin.da.live/source</code></div><div><code>/{org}/sites/{site}/source</code></div></div>
+        <div><div>Folder list</div><div>Separate <code>/list</code> endpoint</div><div>GET the source folder ending in <code>/</code></div></div>
+        <div><div>Versions</div><div><code>/versionlist</code></div><div><code>/source/page.html/.versions</code></div></div>
+        <div><div>Lifecycle</div><div><code>/status</code> · <code>/preview</code> · <code>/live</code> with ref</div><div>Site-scoped operations without lifecycle ref</div></div>
+        <div><div>Jobs</div><div>Legacy job paths</div><div><code>/jobs/{topic}/{name}</code> and report links</div></div>
+        <div><div>Code</div><div><code>/code/{owner}/{repo}/{ref}</code></div><div><code>/{owner}/repos/{repo}/code/{ref}</code></div></div>
+      </div>
+      <p>A generic “just swap the base URL” function is not enough. Jobs and snapshots become plural resources, code keeps its special route, and some legacy operations were deliberately not ported.</p>
+    </div>
+
+    <div>
+      <h2>Is Helix 6 done?</h2>
+      <p>The honest answer is “real, running, and still integrating.” Separate backend maturity from client migration maturity.</p>
+      <div class="atlas-grid readiness">
+        <div><div><p>Real today</p><h3>The service exists</h3><ul><li>Continuously released</li><li>Selected upgraded sites</li><li>Live upgrade signal</li><li>Major API families implemented</li></ul></div></div>
+        <div><div><p>Ongoing</p><h3>Clients are adapting</h3><ul><li>DA Live H6 fixes</li><li>Sidekick opt-in support</li><li>Tools compatibility layer</li><li>End-to-end rollout work</li></ul></div></div>
+        <div><div><p>Do not assume</p><h3>Perfect parity</h3><ul><li>Permission hints still differ</li><li>No H6 bulk status POST</li><li>Some documentation is stale</li><li>Some client routes are transitional</li></ul></div></div>
+      </div>
+    </div>
+
+    <div>
+      <h2>What da-cli should do.</h2>
+      <p>Build a bilingual receptionist. Commands should say “preview this page”; one compatibility layer should decide how to speak H5 or H6.</p>
+      <div class="atlas-flow">
+        <div><div>Stable intent</div><div><strong>da-cli commands</strong></div><div>source · preview · publish · code · status</div></div>
+        <div><div>New seam</div><div><strong>Admin client</strong></div><div>detect profile · normalize paths · responses · jobs · errors</div></div>
+        <div><div>Translator A</div><div><strong>H5 adapter</strong></div><div>preserve current behavior exactly</div></div>
+        <div><div>Translator B</div><div><strong>H6 adapter</strong></div><div>explicit api.aem.live resource routes</div></div>
+      </div>
+      <ol><li><strong>Extract H5 first:</strong> move today’s logic without changing behavior.</li><li><strong>Detect per site:</strong> read the upgrade header and cache carefully.</li><li><strong>Normalize results:</strong> commands see one stable internal model.</li><li><strong>Test both dialects:</strong> one behavioral suite, two adapters, two fixture sites.</li></ol>
+      <blockquote><strong>The safe strategy:</strong> do not wait for a universal H6 launch—and do not flip everything at once. Add the translation seam now, keep H5 working, and activate H6 site by site.</blockquote>
+    </div>
+
+    <div>
+      <h2>Pocket glossary.</h2>
+      <p>These definitions are intentionally non-lawyerly.</p>
+      <div class="accordion">
+        <div><div>Control plane</div><div>The APIs and tools that tell the platform what to do. It is not the webpage your visitor sees.</div></div>
+        <div><div>Source</div><div>The authored document or data before it becomes a delivered webpage.</div></div>
+        <div><div>Preview</div><div>Build or refresh the non-production representation used for review.</div></div>
+        <div><div>Live / publish</div><div>Promote prepared content to the public delivery tier.</div></div>
+        <div><div>Site</div><div>The H6 lifecycle identity used for content, preview, publish, status, and configuration.</div></div>
+        <div><div>Repo / ref</div><div>The Git repository and branch or tag identity. In H6 it remains especially important for code.</div></div>
+        <div><div>Wire format</div><div>The exact HTTP method, URL, headers, and body a client sends.</div></div>
+        <div><div>Adapter</div><div>A translator that lets one command work against different backend contracts.</div></div>
+        <div><div>Job</div><div>A tracked unit of work, such as a large preview or publish operation.</div></div>
+      </div>
+    </div>
+
+    <div>
+      <blockquote>You do not need to learn two products. You need one mental model: <strong>H6 unifies the control plane, while a compatibility layer protects clients from the changed grammar.</strong></blockquote>
+      <p><small>Based on the helix-api-service router and OpenAPI, the da-nx unified API, DA Live migration work, Sidekick, Helix Bot, Helix Tools, AEM Desktop, and a live upgrade probe. This is an explanatory map, not a public support commitment.</small></p>
+    </div>
+
+    <div>
+      <div class="metadata">
+        <div><div>Title</div><div>Helix 5 to Helix 6 — the beginner field guide</div></div>
+        <div><div>Description</div><div>A visual, beginner-first explanation of the Helix 5 to Helix 6 control-plane changes and what da-cli needs for forward compatibility.</div></div>
+        <div><div>kind</div><div>explainer</div></div>
+        <div><div>topic</div><div>Helix 6, APIs, da-cli, lifecycle</div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>

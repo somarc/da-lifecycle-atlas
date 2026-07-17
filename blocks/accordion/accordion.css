@@ -1,0 +1,34 @@
+.accordion details {
+  border-top: 1px solid var(--atlas-line);
+}
+
+.accordion details:last-child {
+  border-bottom: 1px solid var(--atlas-line);
+}
+
+.accordion summary {
+  position: relative;
+  padding: 18px 46px 18px 4px;
+  cursor: pointer;
+  font-family: var(--mono-font-family);
+  font-size: var(--body-font-size-s);
+  list-style: none;
+}
+
+.accordion summary::after {
+  position: absolute;
+  top: 18px;
+  right: 12px;
+  color: var(--atlas-gold);
+  content: '+';
+}
+
+.accordion details[open] summary::after {
+  content: '−';
+}
+
+.accordion .accordion-item-body {
+  max-width: 760px;
+  padding: 0 4px 20px;
+  color: var(--text-color-muted);
+}

@@ -1,0 +1,59 @@
+.atlas-flow {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--atlas-line);
+  padding: 22px;
+  background: var(--atlas-surface);
+  box-shadow: var(--atlas-shadow);
+}
+
+.atlas-flow .atlas-flow-step {
+  display: grid;
+  min-height: 120px;
+  border: 1px solid var(--atlas-line);
+  background: var(--background-color);
+}
+
+.atlas-flow .atlas-flow-step > div {
+  padding: 18px;
+}
+
+.atlas-flow .atlas-flow-cell-1 {
+  color: var(--text-color-muted);
+  font-family: var(--mono-font-family);
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.atlas-flow .atlas-flow-cell-2 {
+  font-size: var(--heading-font-size-s);
+}
+
+.atlas-flow .atlas-flow-cell-3 {
+  color: var(--atlas-teal);
+  font-family: var(--mono-font-family);
+  font-size: var(--body-font-size-xs);
+  overflow-wrap: anywhere;
+}
+
+.atlas-flow .atlas-flow-arrow {
+  color: var(--atlas-gold);
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  .atlas-flow {
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+  }
+
+  .atlas-flow .atlas-flow-step {
+    grid-template-rows: auto 1fr auto;
+    min-width: 0;
+  }
+
+  .atlas-flow .atlas-flow-arrow {
+    transform: rotate(-90deg);
+  }
+}
