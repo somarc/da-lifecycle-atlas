@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "operation": "content.tree",
+  "target": "somarc/da-lifecycle-atlas/",
+  "data": {
+    "prefix": "/",
+    "count": 7,
+    "paths": [
+      "/footer.html",
+      "/index.html",
+      "/learnings.html",
+      "/nav.html",
+      "/plans.html",
+      "/provenance.html",
+      "/explainers/helix-5-to-helix-6.html"
+    ]
+  },
+  "warnings": [],
+  "next": []
+}

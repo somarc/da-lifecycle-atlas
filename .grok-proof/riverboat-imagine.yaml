@@ -1,0 +1,12 @@
+# REVIEWED RIVERBOAT INPUT — executable local automation.
+#
+# This command uses the operator's authenticated Grok session and may consume
+# image-generation capacity. Root --commit does not gate this shell side effect.
+# It must only run from this trusted checkout after reviewing the prompt and
+# wrapper committed with it.
+name: atlas-grok-imagine-proof
+steps:
+  - id: generate-atlas-transition
+    command: ./.grok-proof/bin/capture-imagine.sh
+    timeout: 10m
+    requires_approval: true
