@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/media/atlas/helix-transition.jpg",
+  "data": {
+    "mode": "committed",
+    "path": "/media/atlas/helix-transition.jpg",
+    "source": "media/atlas/helix-transition.jpg"
+  },
+  "changes": [
+    "/media/atlas/helix-transition.jpg"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /media/atlas/helix-transition.jpg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "operation": "content.put",
+  "target": "somarc/da-lifecycle-atlas/explainers/helix-5-to-helix-6.html",
+  "data": {
+    "mode": "committed",
+    "path": "/explainers/helix-5-to-helix-6.html",
+    "source": "atlas/fixtures/explainers/helix-5-to-helix-6.html"
+  },
+  "changes": [
+    "/explainers/helix-5-to-helix-6.html"
+  ],
+  "warnings": [],
+  "next": [
+    "da --org somarc --repo da-lifecycle-atlas --commit preview page /explainers/helix-5-to-helix-6.html"
+  ]
+}
