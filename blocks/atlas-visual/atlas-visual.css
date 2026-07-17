@@ -1,0 +1,37 @@
+.atlas-visual-container .atlas-visual-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.atlas-visual {
+  min-height: 100vh;
+  background: #f4efe5;
+}
+
+.atlas-visual iframe {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  border: 0;
+  background: #f4efe5;
+}
+
+.atlas-visual[data-error='invalid-source'] {
+  max-width: 1200px;
+  min-height: auto;
+  margin: 40px auto;
+  border: 1px solid #b44e2f;
+  padding: 24px;
+}
+
+.atlas-visual[data-error='invalid-source']::after {
+  content: 'Atlas visual links must point to a same-origin file under /visuals.';
+  color: #b44e2f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .atlas-visual,
+  .atlas-visual iframe {
+    background: #17201d;
+  }
+}

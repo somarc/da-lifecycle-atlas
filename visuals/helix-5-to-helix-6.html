@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Helix 5 → Helix 6 — the “I know nothing” field guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,650&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4efe5;--paper-2:#ebe3d3;--ink:#202824;--muted:#68716a;--line:#c9bfad;
+  --h5:#b44e2f;--h5-soft:#f1d9ce;--h6:#176b68;--h6-soft:#cfe4de;--gold:#c3953e;
+  --blue:#315a78;--white:#fffdf7;--shadow:0 18px 50px rgba(48,39,24,.10);
+  --serif:"Newsreader",Georgia,serif;--mono:"DM Mono",ui-monospace,monospace;
+}
+@media(prefers-color-scheme:dark){:root{
+  --paper:#17201d;--paper-2:#202b27;--ink:#f1ebdf;--muted:#aeb8b0;--line:#3d4b45;
+  --h5:#e78361;--h5-soft:#4b2d24;--h6:#69c7bd;--h6-soft:#193d39;--gold:#e0b967;
+  --blue:#83adc9;--white:#222c28;--shadow:0 18px 55px rgba(0,0,0,.25);
+}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+  radial-gradient(circle at 15% 0%,color-mix(in srgb,var(--gold) 13%,transparent),transparent 31rem),
+  linear-gradient(90deg,color-mix(in srgb,var(--line) 24%,transparent) 1px,transparent 1px),
+  linear-gradient(color-mix(in srgb,var(--line) 18%,transparent) 1px,transparent 1px),var(--paper);
+  background-size:auto,34px 34px,34px 34px,auto;color:var(--ink);font-family:var(--serif);line-height:1.5}
+button,a{font:inherit}button{color:inherit}.shell{display:grid;grid-template-columns:240px minmax(0,1fr);gap:44px;max-width:1440px;margin:auto;padding:24px 34px 80px}
+nav{position:sticky;top:22px;height:max-content;border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);padding:19px 17px;box-shadow:var(--shadow)}
+.nav-mark{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);padding-bottom:13px;border-bottom:1px solid var(--line)}
+nav a{display:block;text-decoration:none;color:var(--muted);padding:9px 7px;border-left:2px solid transparent;font-size:15px}nav a:hover,nav a.active{color:var(--ink);border-color:var(--gold)}
+main{min-width:0}.hero{min-height:82vh;display:flex;flex-direction:column;justify-content:center;padding:50px 0 70px}.embedded .hero{min-height:780px}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;font-size:12px;color:var(--h6);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:30px;height:1px;background:currentColor}
+h1{font-size:clamp(54px,8vw,116px);line-height:.86;letter-spacing:-.055em;margin:22px 0 30px;max-width:1040px;font-weight:500}h1 .arrow{color:var(--gold);font-style:italic}.lede{font-size:clamp(22px,2.6vw,34px);line-height:1.25;max-width:820px;margin:0}.lede em{color:var(--h5)}
+.hero-bottom{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}.truth{border-top:1px solid var(--line);padding:16px 4px}.truth b{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;display:block;color:var(--muted);margin-bottom:8px}.truth span{font-size:19px}
+section{padding:72px 0;scroll-margin-top:35px}.section-kicker{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.13em;text-transform:uppercase}.section-head{font-size:clamp(38px,5vw,68px);line-height:1;letter-spacing:-.035em;margin:12px 0 16px;font-weight:500}.section-intro{font-size:21px;color:var(--muted);max-width:760px;margin:0 0 35px}
+.big-idea{display:grid;grid-template-columns:1fr 70px 1fr;gap:18px;align-items:stretch}.era{border:1px solid var(--line);background:var(--white);padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}.era:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--era)}.era.h5{--era:var(--h5)}.era.h6{--era:var(--h6)}.era-label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--era)}.era h3{font-size:34px;line-height:1.05;margin:12px 0}.era p{font-size:18px;color:var(--muted)}.building{display:grid;gap:9px;margin-top:24px}.door{font-family:var(--mono);font-size:13px;border:1px solid var(--line);padding:13px;background:var(--paper)}.door strong{display:block;color:var(--era);font-size:11px;margin-bottom:4px;text-transform:uppercase}.merge-arrow{display:grid;place-items:center;font-size:48px;color:var(--gold)}
+.caption{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:16px}.plain-box{border:1px solid var(--line);background:var(--paper-2);padding:22px;margin-top:22px;font-size:23px}.plain-box strong{color:var(--h6)}
+.switcher{display:flex;gap:8px;margin:0 0 22px}.switcher button{border:1px solid var(--line);padding:10px 16px;background:var(--white);cursor:pointer;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.switcher button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.request-stage{border:1px solid var(--line);background:var(--white);padding:26px;box-shadow:var(--shadow)}.route{display:grid;grid-template-columns:210px 50px minmax(220px,1fr) 50px minmax(220px,1fr);align-items:center;gap:8px}.route-node{min-height:145px;border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;justify-content:center;background:var(--paper)}.route-node small{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.route-node b{font-size:25px;line-height:1.1;margin:7px 0}.route-node code{font-family:var(--mono);font-size:12px;color:var(--h6);overflow-wrap:anywhere}.route-arrow{text-align:center;font-size:30px;color:var(--gold)}.route-note{display:flex;gap:12px;align-items:flex-start;margin-top:20px;padding-top:17px;border-top:1px dashed var(--line);color:var(--muted)}.route-note b{color:var(--ink)}
+.change-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.change{border:1px solid var(--line);background:var(--white);padding:25px;position:relative}.change-num{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.1em}.change h3{font-size:28px;line-height:1.1;margin:10px 0}.before-after{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;gap:6px;margin:20px 0 12px}.mini{padding:13px;border:1px solid var(--line);min-height:100px}.mini.old{background:var(--h5-soft)}.mini.new{background:var(--h6-soft)}.mini label{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.mini code{font-family:var(--mono);font-size:12px;overflow-wrap:anywhere}.mini-arrow{text-align:center;color:var(--gold)}.change p{color:var(--muted);margin-bottom:0}
+.branch-rail{display:grid;grid-template-columns:1fr 1fr;gap:16px}.rail{border:1px solid var(--line);background:var(--white);padding:28px}.rail h3{font-size:31px;margin:0 0 8px}.rail p{color:var(--muted)}.stack{margin-top:24px;display:grid;gap:8px}.pill{font-family:var(--mono);font-size:12px;border:1px solid var(--line);padding:12px;display:flex;justify-content:space-between;gap:10px}.pill .ref{color:var(--h5)}.h6 .pill .ref{color:var(--h6)}
+.map{position:relative;display:grid;grid-template-columns:1fr 100px 1fr;gap:18px}.map-col{display:grid;gap:10px}.map-title{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:4px}.map-card{border:1px solid var(--line);background:var(--white);padding:15px}.map-card b{display:block;font-size:18px}.map-card code{font-family:var(--mono);font-size:11px;color:var(--muted)}.map-mid{display:grid;place-items:center;color:var(--gold);font-family:var(--mono);font-size:11px;text-align:center}.map-mid:before{content:"many roads\A become\A one campus";white-space:pre}
+.status-board{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.status-card{border:1px solid var(--line);background:var(--white);padding:22px}.status-card .dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:8px}.dot.good{background:var(--h6)}.dot.warn{background:var(--gold)}.dot.bad{background:var(--h5)}.status-card h3{font-size:24px;margin:11px 0}.status-card ul{padding-left:18px;color:var(--muted)}
+.adapter{border:1px solid var(--line);background:var(--ink);color:var(--paper);padding:30px;box-shadow:var(--shadow)}.adapter-flow{display:grid;grid-template-columns:1fr 48px 1.2fr 48px 1fr;align-items:center;gap:7px}.adapter-box{border:1px solid color-mix(in srgb,var(--paper) 25%,transparent);padding:22px;min-height:150px}.adapter-box small{font-family:var(--mono);color:var(--gold);text-transform:uppercase;letter-spacing:.09em}.adapter-box h3{font-size:27px;margin:8px 0}.adapter-box p{color:color-mix(in srgb,var(--paper) 75%,transparent);margin:0}.adapter-arrow{text-align:center;color:var(--gold);font-size:26px}.adapter-split{display:grid;grid-template-columns:1fr 1fr;gap:8px}.adapter-split .adapter-box:first-child{border-color:var(--h5)}.adapter-split .adapter-box:last-child{border-color:var(--h6)}
+.steps{counter-reset:steps;display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:22px}.step{counter-increment:steps;border-top:1px solid color-mix(in srgb,var(--paper) 25%,transparent);padding:16px 0 0 44px;position:relative}.step:before{content:counter(steps);position:absolute;left:0;top:16px;width:28px;height:28px;border:1px solid var(--gold);display:grid;place-items:center;font-family:var(--mono);font-size:11px;color:var(--gold)}.step b{display:block;font-size:19px}.step span{color:color-mix(in srgb,var(--paper) 70%,transparent)}
+.glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.term{border:1px solid var(--line);background:var(--white)}.term button{width:100%;text-align:left;border:0;background:none;padding:18px;cursor:pointer}.term b{font-family:var(--mono);font-size:13px;color:var(--blue)}.term span{float:right;color:var(--gold)}.definition{display:none;padding:0 18px 18px;color:var(--muted)}.term.open .definition{display:block}.term.open button span{transform:rotate(45deg)}
+.bottom-line{font-size:clamp(36px,5vw,64px);line-height:1.06;border-top:1px solid var(--line);padding-top:35px}.bottom-line em{color:var(--h6)}
+.source-note{font-family:var(--mono);font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:55px}
+[data-view]{display:none}[data-view].show{display:grid}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:0 20px 60px}nav{z-index:10;top:0;margin:0 -20px;padding:10px 20px;display:flex;gap:4px;overflow:auto;white-space:nowrap;border-width:0 0 1px}.nav-mark{display:none}nav a{display:inline-block;border-left:0;border-bottom:2px solid transparent}.hero{min-height:auto;padding-top:80px}.big-idea{grid-template-columns:1fr}.merge-arrow{transform:rotate(90deg)}.route{grid-template-columns:1fr}.route-arrow{transform:rotate(90deg)}.change-grid,.branch-rail,.status-board,.glossary{grid-template-columns:1fr 1fr}.adapter-flow{grid-template-columns:1fr}.adapter-arrow{transform:rotate(90deg)}.map{grid-template-columns:1fr 54px 1fr}}
+@media(max-width:640px){h1{font-size:56px}.hero-bottom,.change-grid,.branch-rail,.status-board,.glossary,.steps,.adapter-split{grid-template-columns:1fr}.map{grid-template-columns:1fr}.map-mid{padding:14px}.map-mid:before{content:"↓ unified under api.aem.live ↓"}.before-after{grid-template-columns:1fr}.mini-arrow{transform:rotate(90deg)}.era,.request-stage,.adapter{padding:20px}.section-head{font-size:43px}.shell{padding-left:15px;padding-right:15px}nav{margin:0 -15px;padding-left:15px}.route-node{min-height:auto}}
+@media(prefers-reduced-motion:no-preference){.hero>*{animation:rise .65s both}.hero>*:nth-child(2){animation-delay:.08s}.hero>*:nth-child(3){animation-delay:.16s}.hero>*:nth-child(4){animation-delay:.24s}.change,.status-card,.term{transition:transform .2s ease,box-shadow .2s ease}.change:hover,.status-card:hover,.term:hover{transform:translateY(-3px);box-shadow:var(--shadow)}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav aria-label="Explainer sections">
+  <div class="nav-mark">Field guide · 7 stops</div>
+  <a href="#start">Start here</a><a href="#mental-model">Mental model</a><a href="#request">Follow a request</a><a href="#changes">Four changes</a><a href="#map">API map</a><a href="#readiness">Is it ready?</a><a href="#cli">What da-cli does</a><a href="#glossary">Glossary</a>
+</nav>
+<main>
+<header class="hero" id="start">
+  <div class="eyebrow">No prior Helix knowledge required</div>
+  <h1>Helix 5 <span class="arrow">→</span><br>Helix 6</h1>
+  <p class="lede">The short version: Adobe is turning <em>two control desks with different rules</em> into <strong>one front door with a more consistent map.</strong></p>
+  <div class="hero-bottom">
+    <div class="truth"><b>What does not change</b><span>Your site still has authored content, code, preview, and live delivery.</span></div>
+    <div class="truth"><b>What does change</b><span>Where tools send requests, how they address a site, and the shape of some messages.</span></div>
+  </div>
+</header>
+
+<section id="mental-model">
+  <div class="section-kicker">01 · The mental model</div>
+  <h2 class="section-head">Two buildings become one campus.</h2>
+  <p class="section-intro">Forget implementation detail for a moment. In Helix 5, authoring and site operations live behind different doors. Helix 6 pulls them under one service.</p>
+  <div class="big-idea">
+    <article class="era h5">
+      <div class="era-label">Helix 5 · today</div><h3>Two control desks</h3>
+      <p>A client must know which building owns which job.</p>
+      <div class="building">
+        <div class="door"><strong>DA Admin</strong>admin.da.live<br>source files · lists · versions</div>
+        <div class="door"><strong>Helix Admin</strong>admin.hlx.page<br>preview · publish · status · code</div>
+      </div>
+    </article>
+    <div class="merge-arrow" aria-hidden="true">→</div>
+    <article class="era h6">
+      <div class="era-label">Helix 6 · emerging</div><h3>One front door</h3>
+      <p>The same service understands content, lifecycle, code, configuration, and jobs.</p>
+      <div class="building">
+        <div class="door"><strong>AEM Admin API</strong>api.aem.live<br>/{org}/sites/{site}/…</div>
+        <div class="door"><strong>Special lane for code</strong>/{owner}/repos/{repo}/code/{ref}/…</div>
+      </div>
+    </article>
+  </div>
+  <div class="plain-box"><strong>Plain English:</strong> H6 is mostly a control-plane redesign. It changes how tools talk to Adobe services—not the idea of a webpage itself.</div>
+</section>
+
+<section id="request">
+  <div class="section-kicker">02 · Follow one request</div>
+  <h2 class="section-head">“Preview my About page.”</h2>
+  <p class="section-intro">Choose a version. Notice what moves: the client intent stays the same, but the address and routing change.</p>
+  <div class="switcher" role="group" aria-label="Select Helix version">
+    <button id="show-h5" aria-pressed="true">See H5 route</button><button id="show-h6" aria-pressed="false">See H6 route</button>
+  </div>
+  <div class="request-stage">
+    <div class="route show" data-view="h5">
+      <div class="route-node"><small>You / da-cli</small><b>Preview</b><code>/about.html</code></div><div class="route-arrow">→</div>
+      <div class="route-node"><small>First stop</small><b>DA flush</b><code>admin.da.live/preview/acme/site/about.html</code></div><div class="route-arrow">→</div>
+      <div class="route-node"><small>Second stop</small><b>Helix preview</b><code>admin.hlx.page/preview/acme/site/main/about</code></div>
+    </div>
+    <div class="route" data-view="h6">
+      <div class="route-node"><small>You / da-cli</small><b>Preview</b><code>/about.html</code></div><div class="route-arrow">→</div>
+      <div class="route-node"><small>One front door</small><b>Site preview</b><code>api.aem.live/acme/sites/site/preview/about</code></div><div class="route-arrow">→</div>
+      <div class="route-node"><small>Result</small><b>Status + links</b><code>webPath · preview · live · jobs</code></div>
+    </div>
+    <div class="route-note"><span>◎</span><div><b>The subtle part:</b> H5 puts <code>main</code> (the code branch) inside most operation URLs. H6 site lifecycle URLs do not. Code still has its own branch-aware route.</div></div>
+  </div>
+</section>
+
+<section id="changes">
+  <div class="section-kicker">03 · The four changes that matter</div>
+  <h2 class="section-head">Same nouns. New grammar.</h2>
+  <p class="section-intro">If you remember these four cards, you understand most of the migration risk.</p>
+  <div class="change-grid">
+    <article class="change"><div class="change-num">CHANGE 01</div><h3>The front door changes</h3>
+      <div class="before-after"><div class="mini old"><label>Before</label><code>admin.da.live<br>admin.hlx.page</code></div><div class="mini-arrow">→</div><div class="mini new"><label>After</label><code>api.aem.live</code></div></div>
+      <p>A client must detect which door a particular site uses. The rollout is per-site, not one global switch.</p></article>
+    <article class="change"><div class="change-num">CHANGE 02</div><h3>The address reads like a resource</h3>
+      <div class="before-after"><div class="mini old"><label>H5</label><code>/preview/org/site/main/about</code></div><div class="mini-arrow">→</div><div class="mini new"><label>H6</label><code>/org/sites/site/preview/about</code></div></div>
+      <p>Site identity moves to the front. The branch disappears from lifecycle operations.</p></article>
+    <article class="change"><div class="change-num">CHANGE 03</div><h3>The message body changes</h3>
+      <div class="before-after"><div class="mini old"><label>DA upload</label><code>multipart form<br>field: data</code></div><div class="mini-arrow">→</div><div class="mini new"><label>H6 upload</label><code>raw body<br>Content-Type: text/html</code></div></div>
+      <p>Lists, copy/move, versions, bulk operations, and jobs also have different wire shapes.</p></article>
+    <article class="change"><div class="change-num">CHANGE 04</div><h3>Branch belongs to code</h3>
+      <div class="before-after"><div class="mini old"><label>H5 habit</label><code>branch in nearly every admin URL</code></div><div class="mini-arrow">→</div><div class="mini new"><label>H6 model</label><code>site lifecycle<br>repo/ref code lane</code></div></div>
+      <p>Content/site operations and Git code operations become two explicit coordinate systems.</p></article>
+  </div>
+</section>
+
+<section id="branch">
+  <div class="section-kicker">04 · Why “branch” is confusing</div>
+  <h2 class="section-head">Content and code were never the same thing.</h2>
+  <p class="section-intro">H6 makes the distinction harder for a client to ignore.</p>
+  <div class="branch-rail">
+    <article class="rail"><h3>Helix 5 habit</h3><p>One URL formatter often carries <em>org + repo + branch + path</em> everywhere.</p><div class="stack"><div class="pill"><span>preview</span><span class="ref">main</span></div><div class="pill"><span>publish</span><span class="ref">main</span></div><div class="pill"><span>status</span><span class="ref">main</span></div><div class="pill"><span>code</span><span class="ref">main</span></div></div></article>
+    <article class="rail h6"><h3>Helix 6 model</h3><p>The site owns lifecycle. The repository and ref own code.</p><div class="stack"><div class="pill"><span>site preview</span><span class="ref">no ref</span></div><div class="pill"><span>site publish</span><span class="ref">no ref</span></div><div class="pill"><span>site status</span><span class="ref">no ref</span></div><div class="pill"><span>repo code</span><span class="ref">branch/ref</span></div></div></article>
+  </div>
+</section>
+
+<section id="map">
+  <div class="section-kicker">05 · Capability map</div>
+  <h2 class="section-head">Where the familiar jobs go.</h2>
+  <p class="section-intro">The left side shows today’s split. The right side shows the H6 resource families. This is a conceptual map—not a copy-paste URL reference.</p>
+  <div class="map">
+    <div class="map-col"><div class="map-title">H5 · multiple surfaces</div>
+      <div class="map-card"><b>DA source</b><code>list · get · put · delete</code></div><div class="map-card"><b>DA versions</b><code>versionlist · versionsource</code></div><div class="map-card"><b>Helix lifecycle</b><code>status · preview · live</code></div><div class="map-card"><b>Helix operations</b><code>code · job · cache · sitemap</code></div>
+    </div>
+    <div class="map-mid" aria-hidden="true"></div>
+    <div class="map-col"><div class="map-title">H6 · api.aem.live</div>
+      <div class="map-card"><b>Site source</b><code>/org/sites/site/source/…</code></div><div class="map-card"><b>Site versions</b><code>/source/page.html/.versions</code></div><div class="map-card"><b>Site lifecycle</b><code>/status · /preview · /live</code></div><div class="map-card"><b>Explicit resources</b><code>/jobs · /snapshots · /config</code></div><div class="map-card"><b>Repo code lane</b><code>/owner/repos/repo/code/ref</code></div>
+    </div>
+  </div>
+  <p class="caption">Important: plural jobs and snapshots, special code route, and explicit config/list routes mean a generic “just swap the base URL” function is not enough.</p>
+</section>
+
+<section id="readiness">
+  <div class="section-kicker">06 · Reality check</div>
+  <h2 class="section-head">Is Helix 6 done?</h2>
+  <p class="section-intro">The honest answer is “real, running, and still integrating.” Separate backend maturity from client migration maturity.</p>
+  <div class="status-board">
+    <article class="status-card"><span class="dot good"></span><span class="caption">REAL TODAY</span><h3>The service exists</h3><ul><li>Continuously released</li><li>Selected upgraded sites</li><li>Live upgrade signal</li><li>Major API families implemented</li></ul></article>
+    <article class="status-card"><span class="dot warn"></span><span class="caption">ONGOING</span><h3>Clients are adapting</h3><ul><li>DA Live H6 fixes</li><li>Sidekick opt-in support</li><li>Tools compatibility layer</li><li>E2E rollout work</li></ul></article>
+    <article class="status-card"><span class="dot bad"></span><span class="caption">DO NOT ASSUME</span><h3>Perfect parity</h3><ul><li>ACL hints still differ</li><li>No H6 bulk status POST</li><li>Some docs are stale</li><li>Some client routes are transitional</li></ul></article>
+  </div>
+</section>
+
+<section id="cli">
+  <div class="section-kicker">07 · What da-cli should do</div>
+  <h2 class="section-head">Build a bilingual receptionist.</h2>
+  <p class="section-intro">Commands should say “preview this page.” One compatibility layer should decide how to speak H5 or H6.</p>
+  <div class="adapter">
+    <div class="adapter-flow">
+      <div class="adapter-box"><small>Stable intent</small><h3>da-cli commands</h3><p>source · preview · publish · code · status</p></div><div class="adapter-arrow">→</div>
+      <div class="adapter-box"><small>New seam</small><h3>Admin client</h3><p>Detect site profile, normalize paths, responses, jobs, and errors.</p></div><div class="adapter-arrow">→</div>
+      <div class="adapter-split"><div class="adapter-box"><small>Translator A</small><h3>H5 adapter</h3><p>Preserves current behavior exactly.</p></div><div class="adapter-box"><small>Translator B</small><h3>H6 adapter</h3><p>Uses explicit api.aem.live resource routes.</p></div></div>
+    </div>
+    <div class="steps"><div class="step"><b>Extract H5 first</b><span>Move today’s logic without changing behavior.</span></div><div class="step"><b>Detect per site</b><span>Read the upgrade header; cache carefully.</span></div><div class="step"><b>Normalize results</b><span>Commands see one stable internal model.</span></div><div class="step"><b>Test both dialects</b><span>One behavioral suite, two adapters, two fixture sites.</span></div></div>
+  </div>
+  <div class="plain-box"><strong>The safe strategy:</strong> do not wait for a universal H6 launch—and do not flip everything at once. Add the translation seam now, keep H5 working, and activate H6 site by site.</div>
+</section>
+
+<section id="glossary">
+  <div class="section-kicker">Pocket glossary</div><h2 class="section-head">Words people will throw at you.</h2><p class="section-intro">Click any term. These definitions are intentionally non-lawyerly.</p>
+  <div class="glossary">
+    <article class="term"><button><b>CONTROL PLANE</b><span>＋</span></button><div class="definition">The APIs and tools that tell the platform what to do. It is not the webpage your visitor sees.</div></article>
+    <article class="term"><button><b>SOURCE</b><span>＋</span></button><div class="definition">The authored document or data before it becomes a delivered webpage.</div></article>
+    <article class="term"><button><b>PREVIEW</b><span>＋</span></button><div class="definition">Build or refresh the non-production representation used for review.</div></article>
+    <article class="term"><button><b>LIVE / PUBLISH</b><span>＋</span></button><div class="definition">Promote prepared content to the public delivery tier.</div></article>
+    <article class="term"><button><b>SITE</b><span>＋</span></button><div class="definition">The H6 lifecycle identity used for content, preview, publish, status, and configuration.</div></article>
+    <article class="term"><button><b>REPO / REF</b><span>＋</span></button><div class="definition">The Git repository and branch/tag identity. In H6 it remains especially important for code.</div></article>
+    <article class="term"><button><b>WIRE FORMAT</b><span>＋</span></button><div class="definition">The exact HTTP method, URL, headers, and body a client sends.</div></article>
+    <article class="term"><button><b>ADAPTER</b><span>＋</span></button><div class="definition">A translator that lets one command work against different backend contracts.</div></article>
+    <article class="term"><button><b>JOB</b><span>＋</span></button><div class="definition">A tracked unit of background work, such as a large preview or publish operation.</div></article>
+  </div>
+</section>
+
+<section><div class="bottom-line">You do not need to learn two products. You need one mental model: <em>H6 unifies the control plane, while a compatibility layer protects clients from the changed grammar.</em></div>
+  <div class="source-note">BASED ON · helix-api-service router + OpenAPI · da-nx unified API · DA Live migration · Sidekick, Helix Bot, Helix Tools and AEM Desktop PRs · live upgrade probe on 2026-07-17. This is an explanatory map, not a public support commitment.</div>
+</section>
+</main>
+</div>
+<script>
+const buttons={h5:document.querySelector('#show-h5'),h6:document.querySelector('#show-h6')};
+function setView(view){document.querySelectorAll('[data-view]').forEach(el=>el.classList.toggle('show',el.dataset.view===view));Object.entries(buttons).forEach(([key,btn])=>btn.setAttribute('aria-pressed',String(key===view)));}
+buttons.h5.addEventListener('click',()=>setView('h5'));buttons.h6.addEventListener('click',()=>setView('h6'));
+document.querySelectorAll('.term button').forEach(btn=>btn.addEventListener('click',()=>{const term=btn.closest('.term');term.classList.toggle('open');btn.setAttribute('aria-expanded',String(term.classList.contains('open')))}));
+const links=[...document.querySelectorAll('nav a')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const observer=new IntersectionObserver(entries=>{const top=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!top)return;links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+top.target.id));},{rootMargin:'-25% 0px -60% 0px',threshold:[0,.2,.5]});sections.forEach(s=>observer.observe(s));
+
+if(window.parent!==window) document.body.classList.add('embedded');
+const reportHeight=()=>window.parent.postMessage({type:'atlas-visual-height',height:document.documentElement.scrollHeight,path:location.pathname},location.origin);
+new ResizeObserver(reportHeight).observe(document.documentElement);
+window.addEventListener('load',reportHeight);
+</script>
+</body>
+</html>

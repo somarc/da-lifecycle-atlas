@@ -1,9 +1,28 @@
-# Your Project's Title...
-Your project's description...
+# DA Lifecycle Atlas
+
+Visual field guides for the DA CLI, Edge Delivery Services control plane, and
+the platform changes that operators need to understand.
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--da-lifecycle-atlas--somarc.aem.page/
+- Live: https://main--da-lifecycle-atlas--somarc.aem.live/
+
+## Local development
+
+```sh
+npm install
+npx -y @adobe/aem-cli up --no-open --forward-browser-logs --html-folder drafts
+```
+
+The initial local route is `/helix-5-to-helix-6`.
+
+## Visual architecture
+
+- `visuals/` contains standalone, self-contained visual explainers.
+- `blocks/atlas-visual/` embeds a same-origin visual in an authored EDS page
+  and resizes it from a constrained `postMessage` contract.
+- `drafts/` contains local source-page fixtures that mirror the CMS block
+  contract. They are development fixtures, not the production content source.
 
 ## Documentation
 
